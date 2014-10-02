@@ -61,6 +61,8 @@ static NSString * JTSHardwareInfo_HardwareIdentifier_iPodTouch_5G       = @"iPod
 
 @implementation JTSHardwareInfo
 
+#pragma mark - Public
+
 + (NSString *)hardwareIdentifier {
     static dispatch_once_t once;
     static NSString * hardware;
@@ -100,69 +102,12 @@ static NSString * JTSHardwareInfo_HardwareIdentifier_iPodTouch_5G       = @"iPod
 }
 
 + (JTSHardwareType)hardwareType {
-    
-    NSString *hardware = [self hardwareIdentifier];
-    
-    if ([hardware hasPrefix:@"iPhone"]) {
-        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPhone_6_China])       return JTSHardwareType_iPhone_6_China;
-        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPhone_6])             return JTSHardwareType_iPhone_6;
-        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPhone_6Plus_China])   return JTSHardwareType_iPhone_6Plus_China;
-        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPhone_6Plus])         return JTSHardwareType_iPhone_6Plus;
-        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPhone_5S_Global])     return JTSHardwareType_iPhone_5S_Global;
-        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPhone_5S_GSM])        return JTSHardwareType_iPhone_5S_GSM;
-        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPhone_5C_Global])     return JTSHardwareType_iPhone_5C_Global;
-        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPhone_5C_GSM])        return JTSHardwareType_iPhone_5C_GSM;
-        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPhone_5_Global])      return JTSHardwareType_iPhone_5_Global;
-        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPhone_5_GSM])         return JTSHardwareType_iPhone_5_GSM;
-        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPhone_4S_China])      return JTSHardwareType_iPhone_4S_China;
-        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPhone_4S])            return JTSHardwareType_iPhone_4S;
-        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPhone_4_CDMA])        return JTSHardwareType_iPhone_4_CDMA;
-        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPhone_4_GSM_2012])    return JTSHardwareType_iPhone_4_GSM_2012;
-        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPhone_4_GSM])         return JTSHardwareType_iPhone_4_GSM;
-        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPhone_3GS_China])     return JTSHardwareType_iPhone_3GS_China;
-        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPhone_3GS])           return JTSHardwareType_iPhone_3GS;
-        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPhone_3G_China])      return JTSHardwareType_iPhone_3G_China;
-        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPhone_3G])            return JTSHardwareType_iPhone_3G;
-        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPhone])               return JTSHardwareType_iPhone;
-        return JTSHardwareType_iPhone_Unreleased;
-    }
-    else if ([hardware hasPrefix:@"iPad"]) {
-        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPad_Mini_Retina_China])   return JTSHardwareType_iPad_Mini_Retina_China;
-        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPad_Mini_Retina_Cellular])return JTSHardwareType_iPad_Mini_Retina_Cellular;
-        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPad_Mini_Retina_WiFi])    return JTSHardwareType_iPad_Mini_Retina_WiFi;
-        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPad_Mini_Global])         return JTSHardwareType_iPad_Mini_Global;
-        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPad_Mini_GSM])            return JTSHardwareType_iPad_Mini_GSM;
-        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPad_Mini_WiFi])           return JTSHardwareType_iPad_Mini_WiFi;
-        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPad_Air_China])           return JTSHardwareType_iPad_Air_China;
-        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPad_Air_Cellular])        return JTSHardwareType_iPad_Air_Cellular;
-        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPad_Air_WiFi])            return JTSHardwareType_iPad_Air_WiFi;
-        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPad_4_Global])            return JTSHardwareType_iPad_4_Global;
-        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPad_4_GSM])               return JTSHardwareType_iPad_4_GSM;
-        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPad_4_WiFi])              return JTSHardwareType_iPad_4_WiFi;
-        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPad_3_CDMA])              return JTSHardwareType_iPad_3_CDMA;
-        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPad_3_GSM])               return JTSHardwareType_iPad_3_GSM;
-        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPad_3_WiFi])              return JTSHardwareType_iPad_3_WiFi;
-        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPad_2_MID_2012])          return JTSHardwareType_iPad_2_Mid_2012;
-        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPad_2_CDMA])              return JTSHardwareType_iPad_2_CDMA;
-        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPad_2_GSM])               return JTSHardwareType_iPad_2_GSM;
-        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPad_2_WiFi])              return JTSHardwareType_iPad_2_WiFi;
-        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPad_Cellular])            return JTSHardwareType_iPad_Cellular;
-        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPad])                     return JTSHardwareType_iPad;
-        return JTSHardwareType_iPad_Unreleased;
-    }
-    else if ([hardware hasPrefix:@"iPod"]) {
-        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPodTouch_5G])         return JTSHardwareType_iPodTouch_5Gen;
-        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPodTouch_4G])         return JTSHardwareType_iPodTouch_4Gen;
-        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPodTouch_3G])         return JTSHardwareType_iPodTouch_3Gen;
-        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPodTouch_2G])         return JTSHardwareType_iPodTouch_2Gen;
-        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPodTouch_1G])         return JTSHardwareType_iPodTouch_1Gen;
-        return JTSHardwareType_iPodTouch_Unreleased;
-    }
-
-    if ([hardware isEqualToString:@"i386"]) return JTSHardwareType_Simulator;
-    if ([hardware isEqualToString:@"x86_64"]) return JTSHardwareType_Simulator;
-    
-    return JTSHardwareType_NotAvailable;
+    static dispatch_once_t once;
+    static JTSHardwareType type;
+    dispatch_once(&once, ^ {
+        type = [self getCurrentHardwareType];
+    });
+    return type;
 }
 
 + (NSString *)hardwareDisplayName {
@@ -377,6 +322,74 @@ static NSString * JTSHardwareInfo_HardwareIdentifier_iPodTouch_5G       = @"iPod
     });
     
     return isAvailable;
+}
+
+#pragma mark - Private
+
++ (JTSHardwareType)getCurrentHardwareType {
+    
+    NSString *hardware = [self hardwareIdentifier];
+    
+    if ([hardware hasPrefix:@"iPhone"]) {
+        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPhone_6_China])       return JTSHardwareType_iPhone_6_China;
+        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPhone_6])             return JTSHardwareType_iPhone_6;
+        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPhone_6Plus_China])   return JTSHardwareType_iPhone_6Plus_China;
+        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPhone_6Plus])         return JTSHardwareType_iPhone_6Plus;
+        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPhone_5S_Global])     return JTSHardwareType_iPhone_5S_Global;
+        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPhone_5S_GSM])        return JTSHardwareType_iPhone_5S_GSM;
+        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPhone_5C_Global])     return JTSHardwareType_iPhone_5C_Global;
+        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPhone_5C_GSM])        return JTSHardwareType_iPhone_5C_GSM;
+        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPhone_5_Global])      return JTSHardwareType_iPhone_5_Global;
+        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPhone_5_GSM])         return JTSHardwareType_iPhone_5_GSM;
+        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPhone_4S_China])      return JTSHardwareType_iPhone_4S_China;
+        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPhone_4S])            return JTSHardwareType_iPhone_4S;
+        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPhone_4_CDMA])        return JTSHardwareType_iPhone_4_CDMA;
+        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPhone_4_GSM_2012])    return JTSHardwareType_iPhone_4_GSM_2012;
+        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPhone_4_GSM])         return JTSHardwareType_iPhone_4_GSM;
+        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPhone_3GS_China])     return JTSHardwareType_iPhone_3GS_China;
+        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPhone_3GS])           return JTSHardwareType_iPhone_3GS;
+        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPhone_3G_China])      return JTSHardwareType_iPhone_3G_China;
+        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPhone_3G])            return JTSHardwareType_iPhone_3G;
+        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPhone])               return JTSHardwareType_iPhone;
+        return JTSHardwareType_iPhone_Unreleased;
+    }
+    else if ([hardware hasPrefix:@"iPad"]) {
+        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPad_Mini_Retina_China])   return JTSHardwareType_iPad_Mini_Retina_China;
+        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPad_Mini_Retina_Cellular])return JTSHardwareType_iPad_Mini_Retina_Cellular;
+        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPad_Mini_Retina_WiFi])    return JTSHardwareType_iPad_Mini_Retina_WiFi;
+        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPad_Mini_Global])         return JTSHardwareType_iPad_Mini_Global;
+        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPad_Mini_GSM])            return JTSHardwareType_iPad_Mini_GSM;
+        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPad_Mini_WiFi])           return JTSHardwareType_iPad_Mini_WiFi;
+        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPad_Air_China])           return JTSHardwareType_iPad_Air_China;
+        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPad_Air_Cellular])        return JTSHardwareType_iPad_Air_Cellular;
+        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPad_Air_WiFi])            return JTSHardwareType_iPad_Air_WiFi;
+        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPad_4_Global])            return JTSHardwareType_iPad_4_Global;
+        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPad_4_GSM])               return JTSHardwareType_iPad_4_GSM;
+        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPad_4_WiFi])              return JTSHardwareType_iPad_4_WiFi;
+        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPad_3_CDMA])              return JTSHardwareType_iPad_3_CDMA;
+        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPad_3_GSM])               return JTSHardwareType_iPad_3_GSM;
+        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPad_3_WiFi])              return JTSHardwareType_iPad_3_WiFi;
+        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPad_2_MID_2012])          return JTSHardwareType_iPad_2_Mid_2012;
+        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPad_2_CDMA])              return JTSHardwareType_iPad_2_CDMA;
+        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPad_2_GSM])               return JTSHardwareType_iPad_2_GSM;
+        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPad_2_WiFi])              return JTSHardwareType_iPad_2_WiFi;
+        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPad_Cellular])            return JTSHardwareType_iPad_Cellular;
+        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPad])                     return JTSHardwareType_iPad;
+        return JTSHardwareType_iPad_Unreleased;
+    }
+    else if ([hardware hasPrefix:@"iPod"]) {
+        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPodTouch_5G])         return JTSHardwareType_iPodTouch_5Gen;
+        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPodTouch_4G])         return JTSHardwareType_iPodTouch_4Gen;
+        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPodTouch_3G])         return JTSHardwareType_iPodTouch_3Gen;
+        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPodTouch_2G])         return JTSHardwareType_iPodTouch_2Gen;
+        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPodTouch_1G])         return JTSHardwareType_iPodTouch_1Gen;
+        return JTSHardwareType_iPodTouch_Unreleased;
+    }
+    
+    if ([hardware isEqualToString:@"i386"]) return JTSHardwareType_Simulator;
+    if ([hardware isEqualToString:@"x86_64"]) return JTSHardwareType_Simulator;
+    
+    return JTSHardwareType_NotAvailable;
 }
 
 @end
