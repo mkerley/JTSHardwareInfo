@@ -66,6 +66,7 @@ typedef NS_ENUM(NSInteger, JTSHardwareType) {
     JTSHardwareType_iPad_Mini_Retina_CHINA,
 };
 
++ (NSString *)hardwareIdentifier;
 + (JTSHardwareType)hardwareType;
 + (NSString *)hardwareDisplayName;
 + (BOOL)airDropIsAvailable;

@@ -56,7 +56,7 @@ static NSString * JTSHardwareInfo_HardwareIdentifier_iPodTouch_5G       = @"iPod
 
 @implementation JTSHardwareInfo
 
-+ (NSString *)hardwareString {
++ (NSString *)hardwareIdentifier {
     static dispatch_once_t once;
     static NSString * hardware;
     dispatch_once(&once, ^ {
@@ -72,7 +72,7 @@ static NSString * JTSHardwareInfo_HardwareIdentifier_iPodTouch_5G       = @"iPod
 
 + (JTSHardwareType)hardwareType {
     
-    NSString *hardware = [self hardwareString];
+    NSString *hardware = [self hardwareIdentifier];
     
     if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPhone_6])             return JTSHardwareType_iPhone_6;
     if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPhone_6Plus])         return JTSHardwareType_iPhone_6Plus;
@@ -311,7 +311,7 @@ static NSString * JTSHardwareInfo_HardwareIdentifier_iPodTouch_5G       = @"iPod
             isAvailable = YES;
         }
         else {
-            NSString *hardwareString = [self hardwareString];
+            NSString *hardwareString = [self hardwareIdentifier];
             if ([hardwareString hasPrefix:@"iPhone"]) {
                 isAvailable = (hardwareType >= JTSHardwareType_iPhone_5_GSM);
             }

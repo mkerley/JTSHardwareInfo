@@ -18,7 +18,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    NSLog(@"%@", [JTSHardwareInfo hardwareDisplayName]);
+    NSLog(@"\nHardware Identifier: %@\nHardware Name: %@\nSupports AirDrop: %i",
+          [JTSHardwareInfo hardwareIdentifier],
+          [JTSHardwareInfo hardwareDisplayName],
+          [JTSHardwareInfo airDropIsAvailable]);
     return YES;
 }
 
