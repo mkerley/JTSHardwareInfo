@@ -60,7 +60,7 @@ typedef NS_ENUM(NSInteger, JTSHardwareType) {
     JTSHardwareType_iPad_2_WiFi,
     JTSHardwareType_iPad_2_GSM,
     JTSHardwareType_iPad_2_CDMA,
-    JTSHardwareType_iPad_2_MID2012,
+    JTSHardwareType_iPad_2_Mid_2012,
     JTSHardwareType_iPad_3_WiFi,
     JTSHardwareType_iPad_3_GSM,
     JTSHardwareType_iPad_3_CDMA,

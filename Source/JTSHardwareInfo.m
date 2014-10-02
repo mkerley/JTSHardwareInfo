@@ -142,7 +142,7 @@ static NSString * JTSHardwareInfo_HardwareIdentifier_iPodTouch_5G       = @"iPod
         if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPad_3_CDMA])              return JTSHardwareType_iPad_3_CDMA;
         if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPad_3_GSM])               return JTSHardwareType_iPad_3_GSM;
         if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPad_3_WiFi])              return JTSHardwareType_iPad_3_WiFi;
-        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPad_2_MID_2012])          return JTSHardwareType_iPad_2_MID2012;
+        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPad_2_MID_2012])          return JTSHardwareType_iPad_2_Mid_2012;
         if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPad_2_CDMA])              return JTSHardwareType_iPad_2_CDMA;
         if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPad_2_GSM])               return JTSHardwareType_iPad_2_GSM;
         if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPad_2_WiFi])              return JTSHardwareType_iPad_2_WiFi;
@@ -296,7 +296,7 @@ static NSString * JTSHardwareInfo_HardwareIdentifier_iPodTouch_5G       = @"iPod
         case JTSHardwareType_iPad_3_WiFi:
             displayName = @"iPad 3 (WiFi)";
             break;
-        case JTSHardwareType_iPad_2_MID2012:
+        case JTSHardwareType_iPad_2_Mid_2012:
             displayName = @"iPad 2 (Mid 2012)";
             break;
         case JTSHardwareType_iPad_2_CDMA:
