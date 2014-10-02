@@ -13,7 +13,7 @@ A convenient and thorough utility for referencing iOS device hardware informatio
 
 Here's the current enum of all hardware types:
 
-```
+```objc
 typedef NS_ENUM(NSInteger, JTSHardwareType) {
     
     JTSHardwareType_NotAvailable,
