@@ -70,6 +70,30 @@ static NSString * JTSHardwareInfo_HardwareIdentifier_iPodTouch_5G       = @"iPod
     return hardware;
 }
 
++ (JTSHardwareFamily)hardwareFamily {
+    
+    static dispatch_once_t once;
+    static JTSHardwareFamily family;
+    
+    dispatch_once(&once, ^ {
+        NSString *deviceName = [UIDevice currentDevice].name;
+        if ([deviceName hasPrefix:@"iPhone"]) {
+            family = JTSHardwareFamily_iPhone;
+        }
+        else if ([deviceName hasPrefix:@"iPad"]) {
+            family = JTSHardwareFamily_iPad;
+        }
+        else if ([deviceName hasPrefix:@"iPod"]) {
+            family = JTSHardwareFamily_iPodTouch;
+        }
+        else {
+            family = JTSHardwareFamily_Unknown;
+        }
+    });
+    
+    return family;
+}
+
 + (JTSHardwareType)hardwareType {
     
     NSString *hardware = [self hardwareIdentifier];
@@ -328,5 +352,16 @@ static NSString * JTSHardwareInfo_HardwareIdentifier_iPodTouch_5G       = @"iPod
 }
 
 @end
+
+
+
+
+
+
+
+
+
+
+
 
 
