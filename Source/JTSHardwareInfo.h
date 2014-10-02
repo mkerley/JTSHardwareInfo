@@ -30,7 +30,9 @@ typedef NS_ENUM(NSInteger, JTSHardwareType) {
     
     JTSHardwareType_iPhone,
     JTSHardwareType_iPhone_3G,
+    JTSHardwareType_iPhone_3G_CHINA,
     JTSHardwareType_iPhone_3GS,
+    JTSHardwareType_iPhone_3GS_CHINA,
     JTSHardwareType_iPhone_4_GSM,
     JTSHardwareType_iPhone_4_GSM_2012,
     JTSHardwareType_iPhone_4_CDMA,

@@ -12,7 +12,9 @@
 
 static NSString * JTSHardwareInfo_HardwareIdentifier_iPhone             = @"iPhone1,1";
 static NSString * JTSHardwareInfo_HardwareIdentifier_iPhone_3G          = @"iPhone1,2";
+static NSString * JTSHardwareInfo_HardwareIdentifier_iPhone_3G_CHINA    = @"iPhone1,2*";
 static NSString * JTSHardwareInfo_HardwareIdentifier_iPhone_3GS         = @"iPhone2,1";
+static NSString * JTSHardwareInfo_HardwareIdentifier_iPhone_3GS_CHINA   = @"iPhone2,1*";
 static NSString * JTSHardwareInfo_HardwareIdentifier_iPhone_4_GSM       = @"iPhone3,1";
 static NSString * JTSHardwareInfo_HardwareIdentifier_iPhone_4_GSM_2012  = @"iPhone3,2";
 static NSString * JTSHardwareInfo_HardwareIdentifier_iPhone_4_CDMA      = @"iPhone3,3";
@@ -111,7 +113,9 @@ static NSString * JTSHardwareInfo_HardwareIdentifier_iPodTouch_5G       = @"iPod
         if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPhone_4_CDMA])        return JTSHardwareType_iPhone_4_CDMA;
         if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPhone_4_GSM_2012])    return JTSHardwareType_iPhone_4_GSM_2012;
         if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPhone_4_GSM])         return JTSHardwareType_iPhone_4_GSM;
+        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPhone_3GS_CHINA])     return JTSHardwareType_iPhone_3GS_CHINA;
         if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPhone_3GS])           return JTSHardwareType_iPhone_3GS;
+        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPhone_3G_CHINA])      return JTSHardwareType_iPhone_3G_CHINA;
         if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPhone_3G])            return JTSHardwareType_iPhone_3G;
         if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPhone])               return JTSHardwareType_iPhone;
         return JTSHardwareType_iPhone_UNRELEASED;
@@ -214,8 +218,14 @@ static NSString * JTSHardwareInfo_HardwareIdentifier_iPodTouch_5G       = @"iPod
         case JTSHardwareType_iPhone_3GS:
             displayName = @"iPhone 3GS";
             break;
+        case JTSHardwareType_iPhone_3GS_CHINA:
+            displayName = @"iPhone 3GS (China/No WiFi)";
+            break;
         case JTSHardwareType_iPhone_3G:
             displayName = @"iPhone 3G";
+            break;
+        case JTSHardwareType_iPhone_3G_CHINA:
+            displayName = @"iPhone 3G (China/No WiFi)";
             break;
         case JTSHardwareType_iPhone:
             displayName = @"iPhone";
