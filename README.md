@@ -5,7 +5,7 @@ A convenient and thorough utility for referencing iOS device hardware informatio
 
 ## Features
 
-- **Comprehensive** – Includes hardwared identifiers for all iOS devices released by Apple, from the original iPhone to the iPhone 6 and 6 Plus.
+- **Comprehensive** – Includes hardwared identifiers for all iOS devices released by Apple, from the original iPhone to the iPhone 6, 6 Plus, iPad Air 2, and iPad mini 3.
 
 - **AirDrop** – Check for general AirDrop availability.
 
@@ -65,11 +65,15 @@ typedef NS_ENUM(NSInteger, JTSHardwareType) {
     JTSHardwareType_iPad_Air_WiFi,
     JTSHardwareType_iPad_Air_Cellular,
     JTSHardwareType_iPad_Air_China,
+    JTSHardwareType_iPad_Air_2_WiFi,
+    JTSHardwareType_iPad_Air_2_Cellular,
     JTSHardwareType_iPad_Mini_WiFi,
     JTSHardwareType_iPad_Mini_GSM,
     JTSHardwareType_iPad_Mini_Global,
     JTSHardwareType_iPad_Mini_Retina_WiFi,
     JTSHardwareType_iPad_Mini_Retina_Cellular,
     JTSHardwareType_iPad_Mini_Retina_China,
+    JTSHardwareType_iPad_Mini_3_WiFi,
+    JTSHardwareType_iPad_Mini_3_Cellular,
 };
 ```

@@ -69,6 +69,8 @@ typedef NS_ENUM(NSInteger, JTSHardwareType) {
     JTSHardwareType_iPad_4_Global,
     JTSHardwareType_iPad_Air_WiFi,
     JTSHardwareType_iPad_Air_Cellular,
+    JTSHardwareType_iPad_Air_2_WiFi,
+    JTSHardwareType_iPad_Air_2_Cellular,
     JTSHardwareType_iPad_Air_China,
     JTSHardwareType_iPad_Mini_WiFi,
     JTSHardwareType_iPad_Mini_GSM,
@@ -76,6 +78,8 @@ typedef NS_ENUM(NSInteger, JTSHardwareType) {
     JTSHardwareType_iPad_Mini_Retina_WiFi,
     JTSHardwareType_iPad_Mini_Retina_Cellular,
     JTSHardwareType_iPad_Mini_Retina_China,
+    JTSHardwareType_iPad_Mini_3_WiFi,
+    JTSHardwareType_iPad_Mini_3_Cellular,
 };
 
 + (NSString *)hardwareIdentifier;
