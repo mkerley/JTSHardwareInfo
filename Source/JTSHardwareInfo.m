@@ -31,27 +31,31 @@ static NSString * JTSHardwareInfo_HardwareIdentifier_iPhone_6Plus       = @"iPho
 static NSString * JTSHardwareInfo_HardwareIdentifier_iPhone_6_China     = @"iPhone7,2*";
 static NSString * JTSHardwareInfo_HardwareIdentifier_iPhone_6           = @"iPhone7,2";
 
-static NSString * JTSHardwareInfo_HardwareIdentifier_iPad               = @"iPad1,1";
-static NSString * JTSHardwareInfo_HardwareIdentifier_iPad_Cellular      = @"iPad1,2";
-static NSString * JTSHardwareInfo_HardwareIdentifier_iPad_2_WiFi        = @"iPad2,1";
-static NSString * JTSHardwareInfo_HardwareIdentifier_iPad_2_GSM         = @"iPad2,2";
-static NSString * JTSHardwareInfo_HardwareIdentifier_iPad_2_CDMA        = @"iPad2,3";
-static NSString * JTSHardwareInfo_HardwareIdentifier_iPad_2_MID_2012    = @"iPad2,4";
-static NSString * JTSHardwareInfo_HardwareIdentifier_iPad_Mini_WiFi     = @"iPad2,5";
-static NSString * JTSHardwareInfo_HardwareIdentifier_iPad_Mini_GSM      = @"iPad2,6";
-static NSString * JTSHardwareInfo_HardwareIdentifier_iPad_Mini_Global   = @"iPad2,7";
-static NSString * JTSHardwareInfo_HardwareIdentifier_iPad_3_WiFi        = @"iPad3,1";
-static NSString * JTSHardwareInfo_HardwareIdentifier_iPad_3_CDMA        = @"iPad3,2";
-static NSString * JTSHardwareInfo_HardwareIdentifier_iPad_3_GSM         = @"iPad3,3";
-static NSString * JTSHardwareInfo_HardwareIdentifier_iPad_4_WiFi        = @"iPad3,4";
-static NSString * JTSHardwareInfo_HardwareIdentifier_iPad_4_GSM         = @"iPad3,5";
-static NSString * JTSHardwareInfo_HardwareIdentifier_iPad_4_Global      = @"iPad3,6";
-static NSString * JTSHardwareInfo_HardwareIdentifier_iPad_Air_WiFi      = @"iPad4,1";
-static NSString * JTSHardwareInfo_HardwareIdentifier_iPad_Air_Cellular  = @"iPad4,2";
-static NSString * JTSHardwareInfo_HardwareIdentifier_iPad_Air_China     = @"iPad4,3";
+static NSString * JTSHardwareInfo_HardwareIdentifier_iPad                       = @"iPad1,1";
+static NSString * JTSHardwareInfo_HardwareIdentifier_iPad_Cellular              = @"iPad1,2";
+static NSString * JTSHardwareInfo_HardwareIdentifier_iPad_2_WiFi                = @"iPad2,1";
+static NSString * JTSHardwareInfo_HardwareIdentifier_iPad_2_GSM                 = @"iPad2,2";
+static NSString * JTSHardwareInfo_HardwareIdentifier_iPad_2_CDMA                = @"iPad2,3";
+static NSString * JTSHardwareInfo_HardwareIdentifier_iPad_2_MID_2012            = @"iPad2,4";
+static NSString * JTSHardwareInfo_HardwareIdentifier_iPad_Mini_WiFi             = @"iPad2,5";
+static NSString * JTSHardwareInfo_HardwareIdentifier_iPad_Mini_GSM              = @"iPad2,6";
+static NSString * JTSHardwareInfo_HardwareIdentifier_iPad_Mini_Global           = @"iPad2,7";
+static NSString * JTSHardwareInfo_HardwareIdentifier_iPad_3_WiFi                = @"iPad3,1";
+static NSString * JTSHardwareInfo_HardwareIdentifier_iPad_3_CDMA                = @"iPad3,2";
+static NSString * JTSHardwareInfo_HardwareIdentifier_iPad_3_GSM                 = @"iPad3,3";
+static NSString * JTSHardwareInfo_HardwareIdentifier_iPad_4_WiFi                = @"iPad3,4";
+static NSString * JTSHardwareInfo_HardwareIdentifier_iPad_4_GSM                 = @"iPad3,5";
+static NSString * JTSHardwareInfo_HardwareIdentifier_iPad_4_Global              = @"iPad3,6";
+static NSString * JTSHardwareInfo_HardwareIdentifier_iPad_Air_WiFi              = @"iPad4,1";
+static NSString * JTSHardwareInfo_HardwareIdentifier_iPad_Air_Cellular          = @"iPad4,2";
+static NSString * JTSHardwareInfo_HardwareIdentifier_iPad_Air_China             = @"iPad4,3";
+static NSString * JTSHardwareInfo_HardwareIdentifier_iPad_Air_2_WiFi            = @"iPad5,3";
+static NSString * JTSHardwareInfo_HardwareIdentifier_iPad_Air_2_Cellular        = @"iPad5,4";
 static NSString * JTSHardwareInfo_HardwareIdentifier_iPad_Mini_Retina_WiFi      = @"iPad4,4";
 static NSString * JTSHardwareInfo_HardwareIdentifier_iPad_Mini_Retina_Cellular  = @"iPad4,5";
 static NSString * JTSHardwareInfo_HardwareIdentifier_iPad_Mini_Retina_China     = @"iPad4,6";
+static NSString * JTSHardwareInfo_HardwareIdentifier_iPad_Mini_3_WiFi           = @"iPad4,7";
+static NSString * JTSHardwareInfo_HardwareIdentifier_iPad_Mini_3_Cellular       = @"iPad4,8";
 
 static NSString * JTSHardwareInfo_HardwareIdentifier_iPodTouch_1G       = @"iPod1,1";
 static NSString * JTSHardwareInfo_HardwareIdentifier_iPodTouch_2G       = @"iPod2,1";
@@ -192,6 +196,12 @@ static NSString * JTSHardwareInfo_HardwareIdentifier_iPodTouch_5G       = @"iPod
             break;
         
 
+        case JTSHardwareType_iPad_Mini_3_Cellular:
+            displayName = @"iPad Mini 3 (Cellular)";
+            break;
+        case JTSHardwareType_iPad_Mini_3_WiFi:
+            displayName = @"iPad Mini 3 (WiFi)";
+            break;
         case JTSHardwareType_iPad_Mini_Retina_China:
             displayName = @"iPad Mini Retina (China)";
             break;
@@ -220,6 +230,12 @@ static NSString * JTSHardwareInfo_HardwareIdentifier_iPodTouch_5G       = @"iPod
             break;
         case JTSHardwareType_iPad_Air_WiFi:
             displayName = @"iPad Air (WiFi)";
+            break;
+        case JTSHardwareType_iPad_Air_2_Cellular:
+            displayName = @"iPad Air 2 (Cellular)";
+            break;
+        case JTSHardwareType_iPad_Air_2_WiFi:
+            displayName = @"iPad Air 2 (WiFi)";
             break;
             
             
@@ -354,12 +370,16 @@ static NSString * JTSHardwareInfo_HardwareIdentifier_iPodTouch_5G       = @"iPod
         return JTSHardwareType_iPhone_Unreleased;
     }
     else if ([hardware hasPrefix:@"iPad"]) {
+        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPad_Mini_3_Cellular])return JTSHardwareType_iPad_Mini_3_Cellular;
+        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPad_Mini_3_WiFi])    return JTSHardwareType_iPad_Mini_3_WiFi;
         if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPad_Mini_Retina_China])   return JTSHardwareType_iPad_Mini_Retina_China;
         if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPad_Mini_Retina_Cellular])return JTSHardwareType_iPad_Mini_Retina_Cellular;
         if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPad_Mini_Retina_WiFi])    return JTSHardwareType_iPad_Mini_Retina_WiFi;
         if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPad_Mini_Global])         return JTSHardwareType_iPad_Mini_Global;
         if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPad_Mini_GSM])            return JTSHardwareType_iPad_Mini_GSM;
         if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPad_Mini_WiFi])           return JTSHardwareType_iPad_Mini_WiFi;
+        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPad_Air_2_Cellular])      return JTSHardwareType_iPad_Air_2_Cellular;
+        if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPad_Air_2_WiFi])          return JTSHardwareType_iPad_Air_2_WiFi;
         if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPad_Air_China])           return JTSHardwareType_iPad_Air_China;
         if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPad_Air_Cellular])        return JTSHardwareType_iPad_Air_Cellular;
         if ([hardware isEqualToString:JTSHardwareInfo_HardwareIdentifier_iPad_Air_WiFi])            return JTSHardwareType_iPad_Air_WiFi;
