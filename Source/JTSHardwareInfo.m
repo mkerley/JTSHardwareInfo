@@ -88,14 +88,14 @@ static NSString * JTSHardwareInfo_HardwareIdentifier_iPodTouch_6G       = @"iPod
     static JTSHardwareFamily family;
     
     dispatch_once(&once, ^ {
-        NSString *deviceName = [UIDevice currentDevice].name;
-        if ([deviceName hasPrefix:@"iPhone"]) {
+        NSString *model = [[UIDevice currentDevice] model];
+        if ([model hasPrefix:@"iPhone"]) {
             family = JTSHardwareFamily_iPhone;
         }
-        else if ([deviceName hasPrefix:@"iPad"]) {
+        else if ([model hasPrefix:@"iPad"]) {
             family = JTSHardwareFamily_iPad;
         }
-        else if ([deviceName hasPrefix:@"iPod"]) {
+        else if ([model hasPrefix:@"iPod"]) {
             family = JTSHardwareFamily_iPodTouch;
         }
         else {
@@ -355,9 +355,10 @@ static NSString * JTSHardwareInfo_HardwareIdentifier_iPodTouch_6G       = @"iPod
             break;
             
             
-        case JTSHardwareType_NotAvailable:
-            displayName = [self displayNameForUnknownDeviceWithFamily:@"Device"];
-            break;
+        case JTSHardwareType_NotAvailable: {
+            NSString *model = [UIDevice currentDevice].model;
+            displayName = [self displayNameForUnknownDeviceWithFamily:model];
+        } break;
         case JTSHardwareType_iPhone_Unreleased:
             displayName = [self displayNameForUnknownDeviceWithFamily:@"iPhone"];
             break;
