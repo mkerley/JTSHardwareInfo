@@ -54,6 +54,7 @@ typedef NS_ENUM(NSInteger, JTSHardwareType) {
     JTSHardwareType_iPodTouch_3Gen,
     JTSHardwareType_iPodTouch_4Gen,
     JTSHardwareType_iPodTouch_5Gen,
+    JTSHardwareType_iPodTouch_6Gen,
     
     JTSHardwareType_iPad,
     JTSHardwareType_iPad_Cellular,
