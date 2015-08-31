@@ -500,7 +500,7 @@ static NSString * JTSHardwareInfo_HardwareIdentifier_iPodTouch_6G       = @"iPod
             displayName = @"iPad 2 (CDMA)";
             break;
         case JTSHardwareType_iPad_2_GSM:
-            displayName = @"iPad (GSM)";
+            displayName = @"iPad 2 (GSM)";
             break;
         case JTSHardwareType_iPad_2_WiFi:
             displayName = @"iPad 2 (WiFi)";
